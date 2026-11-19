@@ -9,7 +9,7 @@ This repository is the source of the [Hoppscotch Railway template](https://railw
 | Service | Source | Purpose |
 |---|---|---|
 | Hoppscotch | [`hoppscotch/`](hoppscotch/Dockerfile): `hoppscotch/hoppscotch:2026.10.1` (pinned by digest) | Web app on `/`, admin dashboard on `/admin`, API on `/backend`, all on one Railway domain (port 80) |
-| Mailpit | [`mailpit/`](mailpit/Dockerfile): `axllent/mailpit:v1.33.1` (pinned by digest) | Receives the sign-in links (SMTP on 1025, private network); password-protected web inbox on its own domain |
+| Mailpit | [`mailpit/`](mailpit/Dockerfile): `axllent/mailpit:v1.34.0` (pinned by digest) | Receives the sign-in links (SMTP on 1025, private network); password-protected web inbox on its own domain |
 | Postgres | Railway PostgreSQL | Users, collections, teams and settings |
 
 `hoppscotch/railway-start.sh` applies the database migrations, then, on the first boot only, turns on e-mail sign-in through Mailpit and creates `ADMIN_EMAIL` as the administrator, so nobody else can claim a fresh URL through Hoppscotch's open onboarding page. Hoppscotch exits on purpose after its first-boot setup and after every settings change in the admin dashboard; the script starts it again within a few seconds.

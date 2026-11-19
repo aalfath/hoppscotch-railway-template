@@ -1,7 +1,7 @@
 # Mailpit: a small SMTP server and web inbox that receives Hoppscotch's sign-in links
 # until you configure a real mail server in the Hoppscotch admin dashboard.
-# Release notes: https://github.com/axllent/mailpit/releases/tag/v1.33.1
-FROM axllent/mailpit:v1.33.1@sha256:aef2aacc11f075ec0fb6874275ee4a421e688e11a96ebb296134d1735c7761ce
+# Release notes: https://github.com/axllent/mailpit/releases/tag/v1.34.0
+FROM axllent/mailpit:v1.34.0@sha256:23a2ef85bc50853ab3093645d1d64679afd8887e89da5e48a88940c172591a4e
 
 # Web UI and API on 8025 (password-protected through MP_UI_AUTH), SMTP on 1025 (private network only).
 # Messages are kept in /data, which the template mounts as a volume.
